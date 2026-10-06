@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses - CADPOINT Training Institute</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="{{ url_for('static', filename='image/cpl.png') }}" alt="CADPOINT Logo">
+
+            <div class="logo-line"></div>
+
+            <div class="logo-text">
+                <span>CADPOINT AUTHORIZED</span>
+                <span>TRAINING CENTER</span>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('about') }}">About Us</a></li>
+    <li><a href="{{ url_for('course') }}" class="active">Courses</a></li>
+    <li><a href="{{ url_for('faculty') }}">Training & Facilities</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    <li><a href="{{ url_for('login') }}">Login</a></li>
+</ul>
+
+    </nav>
+
+</header>
+
+
+<section class="course-selection">
+    <div class="course-intro">
+
+    <h2>Explore Our Professional Courses</h2>
+
+    <p>
+        Choose the right course based on your education,
+        career goals and area of interest.
+        We offer practical and career-focused training
+        in Computer Applications, Programming,
+        Data Analytics, Graphics Designing, CAD and Engineering.
+    </p>
+
+    <p>
+        Select your preferred category below to explore
+        the available courses and training programs.
+    </p>
+
+</div>
+
+    <h1>Our Courses</h1>
+
+    <div class="course-selection-box">
+
+    <a href="{{ url_for('arts_course') }}" class="course-category">
+        🎓 Arts & Science
+    </a>
+
+    <a href="{{ url_for('engineering') }}" class="course-category">
+        ⚙️ Engineering
+    </a>
+
+</div>
+    
+
+</section>
+<!-- CERTIFICATION -->
+
+<section class="course-info-section">
+
+    <div class="course-info-card">
+
+        <div class="course-info-icon">📜</div>
+
+        <h2>Course Certification</h2>
+
+        <p>
+            Successfully completed students will receive a
+            course completion certificate from CADPOINT
+            Authorized Training Center.
+        </p>
+
+    </div>
+
+</section>
+<!-- CAREER FOCUSED TRAINING -->
+
+<section class="course-info-section">
+
+    <div class="course-info-card">
+
+        <div class="course-info-icon">🚀</div>
+
+        <h2>Career-Focused Training</h2>
+
+        <p>
+            Our courses focus on practical knowledge,
+            technical skills and real-world applications
+            to help learners prepare for career opportunities.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ============================= -->
+<!-- CAREER CTA -->
+<!-- ============================= -->
+
+<section class="career-cta">
+
+    <h2>Ready to Build Your Career?</h2>
+
+    <p>
+        Start learning practical skills and take the next step
+        towards your career goals.
+    </p>
+
+    <div class="career-buttons">
+
+        <a href="course.html" class="cta-btn">
+            Explore Courses
+        </a>
+
+        <a href="contact.html" class="cta-outline-btn">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>

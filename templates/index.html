@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CADPOINT Authorized Training Center</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <img src="{{ url_for('static', filename='image/cpl.png') }}" 
+     alt="CADPOINT Logo">
+
+                <div class="logo-line"></div>
+
+                <div class="logo-text">
+
+                    <span>CADPOINT AUTHORIZED</span>
+
+                    <span>TRAINING CENTER</span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">About Us</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('course') }}">Courses</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faculty') }}">Training & Facilities</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('login') }}">Login</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+     HOME HERO
+========================== -->
+
+<section class="home-hero">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="hero-content">
+
+        <p class="hero-small-title">
+            CADPOINT AUTHORIZED TRAINING CENTER
+        </p>
+
+        <h1>
+            Learn Skills.
+            <br>
+            <span>Build Your Career.</span>
+        </h1>
+
+        <p class="hero-text">
+            Get practical and career-focused training
+            with experienced trainers.
+        </p>
+
+        <div class="hero-buttons">
+
+    <a href="{{ url_for('course') }}" class="btn">
+        Explore Courses
+    </a>
+
+    <a href="{{ url_for('contact') }}" class="outline-btn">
+        Contact Us
+    </a>
+
+
+        </div>
+
+    </div>
+    
+
+
+    <!-- RIGHT ENQUIRY FORM -->
+
+    <div class="hero-enquiry">
+
+        <h2>Course Enquiry</h2>
+
+        <p>
+            Fill in your details and select your course category.
+        </p>
+
+        <form action="{{ url_for('home_enquiry') }}" method="POST">
+
+            <input
+    type="text"
+    name="name"
+    placeholder="Student Name"
+    required
+>
+
+<input
+    type="tel"
+    name="mobile"
+    placeholder="Mobile Number"
+    required
+>
+
+<input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+>
+
+
+            <!-- QUALIFICATION -->
+
+            <select name="qualification" required>
+
+                <option value="">
+                    Select Qualification
+                </option>
+
+                <option>10th</option>
+                <option>12th</option>
+                <option>Diploma</option>
+                <option>UG</option>
+                <option>PG</option>
+
+            </select>
+
+
+            <!-- CATEGORY -->
+
+            <select name="category" id="category" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="arts">
+                    Arts
+                </option>
+
+                <option value="engineering">
+                    Engineering
+                </option>
+
+</select>
+            
+
+
+            <!-- COURSE -->
+
+           <select id="course" name="course" required>
+
+                <option value="">
+                    Select Course
+                </option>
+
+            </select>
+
+
+            <!-- MESSAGE -->
+
+            <textarea
+    name="message"
+    rows="3"
+    placeholder="Your Message"
+></textarea>
+
+
+            <button type="submit">
+                Submit Enquiry
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CHOOSE CADPOINT
+========================== -->
+
+<section class="why-section">
+
+    <div class="section-title">
+
+        <h2>Why Choose CADPOINT?</h2>
+
+        <p>
+            Learn with practical training and develop
+            skills for your career.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                👨‍🏫
+            </div>
+
+            <h3>Expert Trainers</h3>
+
+            <p>
+                Learn from experienced and knowledgeable
+                trainers.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                💻
+            </div>
+
+            <h3>Practical Training</h3>
+
+            <p>
+                Gain hands-on experience through practical
+                training and exercises.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                🎯
+            </div>
+
+            <h3>Career Focused</h3>
+
+            <p>
+                Develop useful skills for your education
+                and career.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                📜
+            </div>
+
+            <h3>Certification</h3>
+
+            <p>
+                Receive certification after successful
+                course completion.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- OUR ACHIEVEMENTS -->
+
+<section class="achievements-section">
+
+    <div class="section-title">
+
+        <h2>🏆 Our Achievements</h2>
+
+        <p>
+            Our journey of training students and building successful careers.
+        </p>
+
+    </div>
+
+    <div class="achievements-grid">
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                👨‍🎓
+            </div>
+
+            <h3>10,000+ Students</h3>
+
+            <p>
+                10,000+ students have successfully completed our
+                professional courses and are now working in various industries.
+            </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                📚
+            </div>
+
+            <h3>100+ Courses Offered</h3>
+
+            <p>
+                100+ A wide range of computer and technical training programs.
+            </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                💻
+            </div>
+
+            <h3>500+ Practical Projects</h3>
+
+            <p>
+                500+ Hands-on projects to improve practical technical skills.
+            </p>
+
+        </div>
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🏫
+            </div>
+
+            <h3>Quality Training</h3>
+
+            <p>
+                Focused on quality computer and technical education.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     POPULAR COURSES
+========================== -->
+
+<section class="popular-courses">
+
+    <div class="section-title">
+
+        <h2>Popular arts & science Courses</h2>
+
+        <p>
+            Explore our popular training programs
+            and build your professional skills.
+        </p>
+
+    </div>
+
+
+    <div class="popular-grid">
+
+
+        <!-- MS OFFICE -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                📑
+            </div>
+
+            <h3>MS Office</h3>
+
+            <p>
+                Learn Word, Excel and PowerPoint
+                for professional use.
+            </p>
+
+           <a href="{{ url_for('arts_course') }}" class="course-link">
+    View Course
+</a>
+        </div>
+
+
+        <!-- PYTHON -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                🐍
+            </div>
+
+            <h3>Python Programming</h3>
+
+            <p>
+                Learn Python programming from basics
+                to practical applications.
+            </p>
+
+            <a href="{{ url_for('arts_course') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+        <!-- ADVANCED EXCEL -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                📊
+            </div>
+
+            <h3>Advanced Excel</h3>
+
+            <p>
+                Learn advanced Excel functions,
+                formulas and data analysis.
+            </p>
+
+           <a href="{{ url_for('arts_course') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+        <!-- FULL STACK -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                🌐
+            </div>
+
+            <h3>Full Stack Development</h3>
+
+            <p>
+                Learn front-end, back-end and
+                database development.
+            </p>
+
+            <a href="{{ url_for('arts_course') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="popular-button">
+
+        <a href="{{ url_for('arts_course') }}" class="view-all-btn">
+    View All Arts & Science Courses
+</a>
+
+    </div>
+
+</section>
+<!-- =========================
+     POPULAR ENGINEERING COURSES
+========================== -->
+
+<section class="popular-courses">
+
+    <div class="section-title">
+
+        <h2>Popular Engineering Courses</h2>
+
+        <p>
+            Explore our popular engineering training programs
+            and develop practical technical skills.
+        </p>
+
+    </div>
+
+
+    <div class="popular-grid">
+
+
+        <!-- AUTOCAD -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                📐
+            </div>
+
+            <h3>AutoCAD</h3>
+
+            <p>
+                Learn 2D and 3D drafting and
+                technical drawing using AutoCAD.
+            </p>
+
+           <a href="{{ url_for('engineering') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+        <!-- SOLIDWORKS -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                ⚙️
+            </div>
+
+            <h3>SolidWorks</h3>
+
+            <p>
+                Learn 3D modelling, design and
+                engineering drawing using SolidWorks.
+            </p>
+
+            <a href="{{ url_for('engineering') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+        <!-- REVIT MEP -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                🏗️
+            </div>
+
+            <h3>Revit MEP</h3>
+
+            <p>
+                Learn MEP design and building
+                services modelling using Revit.
+            </p>
+
+            <a href="{{ url_for('engineering') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+        <!-- CATIA -->
+
+        <div class="popular-card">
+
+            <div class="popular-icon">
+                🔧
+            </div>
+
+            <h3>CATIA</h3>
+
+            <p>
+                Learn 3D design, modelling and
+                engineering applications using CATIA.
+            </p>
+
+            <a href="{{ url_for('engineering') }}" class="course-link">
+    View Course
+</a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="popular-button">
+
+        <a href="{{ url_for('engineering') }}" class="view-all-btn">
+    View All Engineering Courses
+</a>
+
+    </div>
+
+</section>
+<!-- =========================
+     ABOUT CADPOINT
+========================== -->
+
+<section class="home-about">
+
+    <div class="home-about-content">
+
+        <p class="page-label">
+            ABOUT CADPOINT
+        </p>
+
+        <h2>
+            Practical Learning for
+            <span>Better Career Opportunities</span>
+        </h2>
+
+        <p>
+            CADPOINT Authorized Training Center provides
+            practical and career-focused training for
+            students and professionals.
+        </p>
+
+        <p>
+            Our training focuses on hands-on practice,
+            skill development and real-world learning
+            to help learners build confidence.
+        </p>
+
+        <a href="{{ url_for('about') }}" class="btn">
+    Read More
+</a>
+
+    </div>
+
+
+    <div class="home-about-cards">
+
+        <div class="about-small-card">
+
+            <h3>Practical Learning</h3>
+
+            <p>
+                Learn through practical exercises
+                and hands-on training.
+            </p>
+
+        </div>
+
+
+        <div class="about-small-card">
+
+            <h3>Skill Development</h3>
+
+            <p>
+                Build useful technical skills
+                for your career.
+            </p>
+
+        </div>
+
+
+        <div class="about-small-card">
+
+            <h3>Career Support</h3>
+
+            <p>
+                Develop confidence and prepare
+                for career opportunities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     TRAINING FEATURES
+========================== -->
+
+<section class="training-features">
+
+    <div class="section-title">
+
+        <h2>Our Training Features</h2>
+
+        <p>
+            Learn with the right environment, guidance
+            and practical training.
+        </p>
+
+    </div>
+
+
+    <div class="training-feature-grid">
+
+
+        <!-- FEATURE 1 -->
+
+        <div class="training-feature-card">
+
+            <div class="training-feature-icon">
+                💻
+            </div>
+
+            <h3>Hands-on Practice</h3>
+
+            <p>
+                Practice concepts through practical
+                exercises and real-time activities.
+            </p>
+
+        </div>
+
+
+        <!-- FEATURE 2 -->
+
+        <div class="training-feature-card">
+
+            <div class="training-feature-icon">
+                👨‍🏫
+            </div>
+
+            <h3>Experienced Trainers</h3>
+
+            <p>
+                Get proper guidance from experienced
+                and knowledgeable trainers.
+            </p>
+
+        </div>
+
+
+        <!-- FEATURE 3 -->
+
+        <div class="training-feature-card">
+
+            <div class="training-feature-icon">
+                🖥️
+            </div>
+
+            <h3>Computer Lab</h3>
+
+            <p>
+                Practice your skills in a comfortable
+                computer training environment.
+            </p>
+
+        </div>
+
+
+        <!-- FEATURE 4 -->
+
+        <div class="training-feature-card">
+
+            <div class="training-feature-icon">
+                📚
+            </div>
+
+            <h3>Learning Support</h3>
+
+            <p>
+                Receive guidance and support throughout
+                your learning journey.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- =========================
+     CAREER CTA
+========================== -->
+
+<section class="career-cta">
+
+    <div class="career-cta-content">
+
+        <h2>
+            Ready to Build Your Career?
+        </h2>
+
+        <p>
+            Start learning practical skills and
+            take the next step towards your career goals.
+        </p>
+
+        <div class="career-buttons">
+
+             <a href="{{ url_for('course') }}" class="btn">
+        Explore Courses
+    </a>
+
+
+           <a href="{{ url_for('contact') }}" class="outline-btn">
+        Contact Us
+    </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="main-footer">
+
+    <div class="footer-content">
+
+        <!-- ABOUT -->
+
+        <div class="footer-box">
+
+            <h3>CADPOINT</h3>
+
+            <p>
+                CADPOINT Authorized Training Center
+                provides practical and career-focused
+                computer and technical training.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="{{ url_for('home') }}">Home</a>
+
+<a href="{{ url_for('about') }}">About</a>
+
+<a href="{{ url_for('course') }}">Courses</a>
+
+<a href="{{ url_for('faculty') }}">Training & Facilities</a>
+
+<a href="{{ url_for('contact') }}">Contact</a>
+
+        </div>
+
+
+        <!-- COURSES -->
+
+        <div class="footer-box">
+
+            <h3>Popular Courses</h3>
+
+<a href="{{ url_for('course') }}">MS Office</a>
+
+<a href="{{ url_for('course') }}">Python</a>
+
+<a href="{{ url_for('course') }}">Advanced Excel</a>
+
+<a href="{{ url_for('course') }}">Full Stack</a>
+
+<a href="{{ url_for('engineering') }}">AutoCAD</a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>📞 +91 9629647145</p>
+
+            <p>✉️ cadpoint@gmail.com</p>
+
+            <p>
+                📍 cadpoint software training Center,
+                    kumbakonam, 
+                    thanjavur,
+                    Tamil Nadu
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    
+
+</footer>
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 CADPOINT Authorized Training Center.
+        All Rights Reserved.
+    </p>
+
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty - CADPOINT</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img src="{{ url_for('static', filename='image/cpl.png') }}" alt="CADPOINT Logo">
+
+                <div class="logo-line"></div>
+
+                <div class="logo-text">
+
+                    <span>CADPOINT AUTHORIZED</span>
+
+                    <span>TRAINING CENTER</span>
+
+                </div>
+
+            </a>
+
+
+           <ul class="nav-links">
+
+    <li>
+        <a href="{{ url_for('home') }}">
+            Home
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('about') }}">
+            About Us
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('course') }}">
+            Courses
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('faculty') }}" class="active">
+            Training & Facilities
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('contact') }}">
+            Contact
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('login') }}">
+            Login
+        </a>
+    </li>
+
+</ul>
+
+        </nav>
+
+    </header>
+
+
+   <!-- TRAINING & FACILITIES SECTION -->
+
+<section class="faculty-section">
+
+    <div class="section-title">
+
+        <h2>Training & Facilities</h2>
+
+        <p>
+            We provide practical training and facilities
+            to support effective learning.
+        </p>
+
+    </div>
+
+
+    <div class="faculty-grid">
+
+    <!-- 1. COMPUTER LAB -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            💻
+        </div>
+
+        <h3>Computer Lab</h3>
+
+        <p>
+            Modern computer systems with
+            facilities for individual practice
+            and internet-based learning.
+        </p>
+
+    </div>
+
+
+    <!-- 2. CLASSROOM TRAINING -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            📚
+        </div>
+
+        <h3>Classroom Training</h3>
+
+        <p>
+            Learn through theory classes,
+            practical sessions and
+            interactive learning.
+        </p>
+
+    </div>
+
+
+    <!-- 3. HANDS-ON PRACTICE -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            🧑‍💻
+        </div>
+
+        <h3>Hands-on Practice</h3>
+
+        <p>
+            Practice coding, software tools
+            and technical concepts through
+            hands-on exercises.
+        </p>
+
+    </div>
+
+
+    <!-- 4. PROJECT TRAINING -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            📂
+        </div>
+
+        <h3>Project Training</h3>
+
+        <p>
+            Work on mini projects and
+            practical activities with
+            proper project guidance.
+        </p>
+
+    </div>
+
+
+    <!-- 5. SOFTWARE TRAINING -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            💿
+        </div>
+
+        <h3>Software Training</h3>
+
+        <p>
+            Get practical training in
+            programming, designing, CAD
+            and office applications.
+        </p>
+
+    </div>
+
+
+    <!-- 6. TRAINER SUPPORT -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            👨‍🏫
+        </div>
+
+        <h3>Trainer Support</h3>
+
+        <p>
+            Get guidance from trainers
+            through doubt clearing and
+            individual support.
+        </p>
+
+    </div>
+
+
+    <!-- 7. CAREER-ORIENTED TRAINING -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            🎯
+        </div>
+
+        <h3>Career-Oriented Training</h3>
+
+        <p>
+            Develop job-oriented technical
+            skills with interview and
+            resume guidance.
+        </p>
+
+    </div>
+
+
+    <!-- 8. FLEXIBLE LEARNING -->
+
+    <div class="faculty-card">
+
+        <div class="faculty-image">
+            🕐
+        </div>
+
+        <h3>Flexible Learning</h3>
+
+        <p>
+            Choose suitable training options
+            with regular, weekend and
+            flexible batch timings.
+        </p>
+
+    </div>
+
+
+
+    </div>
+
+</section>
+
+<!-- OUR APPROACH TO TRAINING -->
+
+<section class="training-approach">
+
+    <div class="training-approach-content">
+
+        <h2>Our Approach to Training</h2>
+
+        <p>
+            At CADPOINT Authorized Training Center, we focus on
+            creating a comfortable and supportive learning environment
+            for every student. Our training approach combines clear
+            explanations, practical activities and continuous guidance
+            to help students understand concepts easily. We encourage
+            students to practice regularly, improve their confidence
+            and develop useful skills through consistent learning.
+        </p>
+
+        <div class="training-tagline">
+            Learn • Practice • Improve • Grow
+        </div>
+
+    </div>
+
+</section>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 CADPOINT Authorized Training Center.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

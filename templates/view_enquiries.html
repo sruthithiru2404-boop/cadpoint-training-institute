@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Enquiries - CADPOINT</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <section class="enquiries-page">
+
+        <h1>Student Enquiries</h1>
+
+        <p>View all enquiries received from students.</p>
+        <table class="enquiries-table">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Category</th>
+            <th>Course</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for enquiry in enquiries %}
+
+        <tr>
+            <td>{{ enquiry[0] }}</td>
+            <td>{{ enquiry[1] }}</td>
+            <td>{{ enquiry[2] }}</td>
+            <td>{{ enquiry[3] }}</td>
+            <td>{{ enquiry[4] }}</td>
+            <td>{{ enquiry[5] }}</td>
+            <td>{{ enquiry[6] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+    </section>
+
+</body>
+
+</html>

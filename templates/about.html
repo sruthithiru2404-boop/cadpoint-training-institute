@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - CADPOINT</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <img src="{{ url_for('static', filename='image/cpl.png') }}" alt="CADPOINT Logo">
+
+                <div class="logo-line"></div>
+
+                <div class="logo-text">
+
+                    <span>CADPOINT AUTHORIZED</span>
+
+                    <span>TRAINING CENTER</span>
+
+                </div>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}" class="active">About Us</a>
+                </li>
+
+                <a href="{{ url_for('course') }}">Courses</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faculty') }}">Training & Facilities</a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </li>
+
+                <a href="{{ url_for('login') }}">Login</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about-section">
+
+        <div class="about-content">
+
+            <p class="page-label">
+                ABOUT US
+            </p>
+
+            <h1>
+                About
+                <span>CADPOINT</span>
+            </h1>
+
+            <p>
+                CADPOINT Authorized Training Center provides
+                practical and career-focused training for
+                students and professionals.
+            </p>
+
+            <p>
+                We offer training in programming, web development,
+                accounting, engineering design, data visualization
+                and other technology-related courses.
+            </p>
+
+            <p>
+                Our training approach focuses on practical learning,
+                hands-on practice and skill development to help
+                learners build confidence and prepare for their
+                career goals.
+            </p>
+
+        </div>
+
+
+        <!-- ABOUT HIGHLIGHTS -->
+
+        <div class="about-cards">
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🎯
+                </div>
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To provide quality training and practical
+                    skills for learners.
+                </p>
+
+            </div>
+            
+<div class="about-card">
+
+    <div class="about-icon">
+        👁️
+    </div>
+
+    <h3>Our Vision</h3>
+
+    <p>
+        To create skilled and confident learners
+        through quality training and continuous
+        learning opportunities.
+    </p>
+
+</div>
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    💡
+                </div>
+
+                <h3>Practical Learning</h3>
+
+                <p>
+                    Learn concepts through practical exercises
+                    and real-world examples.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🚀
+                </div>
+
+                <h3>Career Focus</h3>
+
+                <p>
+                    Develop useful skills for education and
+                    career opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 CADPOINT Authorized Training Center.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

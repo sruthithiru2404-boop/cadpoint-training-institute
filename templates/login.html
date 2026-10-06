@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - CADPOINT</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+               <img src="{{ url_for('static', filename='image/cpl.png') }}" alt="CADPOINT Logo">
+
+                <div class="logo-line"></div>
+
+                <div class="logo-text">
+
+                    <span>CADPOINT AUTHORIZED</span>
+
+                    <span>TRAINING CENTER</span>
+
+                </div>
+
+            </a>
+
+
+            <ul class="nav-links">
+
+    <li>
+        <a href="{{ url_for('home') }}">
+            Home
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('about') }}">
+            About Us
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('course') }}">
+            Courses
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('faculty') }}">
+            Training & Facilities
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('contact') }}">
+            Contact
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ url_for('login') }}" class="active">
+            Login
+        </a>
+    </li>
+
+</ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- LOGIN SECTION -->
+
+    <section class="login-section">
+
+
+        <div class="login-box">
+
+
+            <div class="login-icon">
+                🔐
+            </div>
+
+
+            <h1>Welcome Back</h1>
+
+
+            <p>
+                Login to your CADPOINT account
+            </p>
+
+
+            <form action="{{ url_for('login') }}" method="POST">
+
+    <label>
+    Login As
+</label>
+
+<select name="loginType" required>
+
+    <option value="admin">
+        Admin
+    </option>
+
+</select>
+
+
+
+<label>
+    Name
+</label>
+
+<input
+    type="text"
+    name="name"
+    placeholder="Enter your name"
+    required
+>
+
+    <label>
+        Email Address
+    </label>
+
+    <input 
+    type="email" 
+    name="email"
+    placeholder="Enter your email" 
+    required 
+>
+
+
+                <label>
+    Password
+</label>
+
+<div class="password-box">
+
+    <input
+    type="password"
+    id="loginPassword"
+    name="password"
+    placeholder="Enter your password"
+    required
+>
+
+   
+</div>
+
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+{% if error %}
+    <p class="login-error">{{ error }}</p>
+{% endif %}
+
+                <button type="submit">
+                    Login
+                </button>
+
+
+            </form>
+
+
+            <p class="register-text">
+
+                Don't have an account?
+
+                <a href="#">
+                    Register
+                </a>
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+<!-- ADMIN CONTROL PANEL -->
+
+<section class="student-features">
+
+    <div class="section-title">
+
+        <h2>Admin Control Panel</h2>
+
+        <p>
+            Manage institute activities and website information.
+        </p>
+
+    </div>
+
+
+    <div class="student-feature-grid">
+
+        <div class="student-feature-card">
+
+            <div class="student-feature-icon">
+                📩
+            </div>
+
+            <h3>Enquiry Management</h3>
+
+            <p>
+                View and manage enquiries received
+                from students through the website.
+            </p>
+
+        </div>
+
+
+        <div class="student-feature-card">
+
+            <div class="student-feature-icon">
+                👨‍🎓
+            </div>
+
+            <h3>Student Management</h3>
+
+            <p>
+                Manage student details, courses
+                and training information.
+            </p>
+
+        </div>
+
+
+        <div class="student-feature-card">
+
+            <div class="student-feature-icon">
+                📚
+            </div>
+
+            <h3>Course Management</h3>
+
+            <p>
+                View and manage available courses
+                and course information.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 CADPOINT Authorized Training Center.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
