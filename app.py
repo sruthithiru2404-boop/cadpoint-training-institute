@@ -9,11 +9,11 @@ def home():
     return render_template("index.html")
 
 db = mysql.connector.connect(
-    host=os.environ["DB_HOST"],
+    host=os.environ.get("DB_HOST", "cadpoint-db-sruthithiru2404-0e87.l.aivencloud.com"),
     port=int(os.environ.get("DB_PORT", "12081")),
-    user=os.environ["DB_USER"],
+    user=os.environ.get("DB_USER", "avnadmin"),
     password=os.environ["DB_PASSWORD"],
-    database=os.environ["DB_NAME"],
+    database=os.environ.get("DB_NAME", "defaultdb"),
     ssl_disabled=False
 )
 
