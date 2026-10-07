@@ -10,7 +10,7 @@ def home():
 
 db = mysql.connector.connect(
     host=os.environ["DB_HOST"],
-    port=int(os.environ["DB_PORT"]),
+    port=int(os.environ.get("DB_PORT", "12081")),
     user=os.environ["DB_USER"],
     password=os.environ["DB_PASSWORD"],
     database=os.environ["DB_NAME"],
