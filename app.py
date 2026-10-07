@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, session, redirect
 import mysql.connector
+import os
 app = Flask(__name__)
 app.secret_key = "cadpoint_secret_key"
 
@@ -8,10 +9,12 @@ def home():
     return render_template("index.html")
 
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="cadpoint"
+    host=os.environ["DB_HOST"],
+    port=int(os.environ["DB_PORT"]),
+    user=os.environ["DB_USER"],
+    password=os.environ["DB_PASSWORD"],
+    database=os.environ["DB_NAME"],
+    ssl_disabled=False
 )
 
 @app.route("/home-enquiry", methods=["POST"])
