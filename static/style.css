@@ -3625,3 +3625,17 @@ body {
     }
 
 }
+
+
+.login-error {
+    color: #b91c1c;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 12px 0;
+    text-align: center;
+    display: block;
+}
